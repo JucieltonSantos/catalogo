@@ -19,7 +19,7 @@ jobs:
         run: npm ci
 
       - name: Lint
-        run: npm run lint
+        run: npm run lint src
 
       - name: Rodar testes com Jest
         run: npm test test:ci
