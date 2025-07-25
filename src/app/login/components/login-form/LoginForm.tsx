@@ -1,6 +1,6 @@
-import { LoginFormComponentProps } from "@/domain/types/login";
-import { LoginField } from "../login-field/LoginField";
-import  Button from "@/components/button/button";
+import { LoginFormComponentProps } from '@/domain/types/login';
+import { LoginField } from '../login-field/LoginField';
+import { Button } from '@/components/button/button';
 
 export function LoginFormComponent({
   onSubmit,
@@ -16,7 +16,7 @@ export function LoginFormComponent({
         type="text"
         placeholder="Usuário"
         error={errors.user?.message}
-        registerProps={register("user")}
+        registerProps={register('user')}
       />
 
       <LoginField
@@ -24,11 +24,11 @@ export function LoginFormComponent({
         type="password"
         placeholder="Senha"
         error={errors.password?.message}
-        registerProps={register("password")}
+        registerProps={register('password')}
       />
 
       <Button type="submit" className="w-full" disabled={!isValid || loading}>
-        {loading ? "Entrando..." : "Entrar"}
+        {loading ? 'Entrando...' : 'Entrar'}
       </Button>
     </form>
   );
