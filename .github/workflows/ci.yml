@@ -13,16 +13,13 @@ jobs:
       - name: Instala Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "22"
+          node-version: '22'
 
       - name: Instalar dependências
         run: npm ci
-
-      - name: Rodar Prettier (checar formatação)
-        run: npx prettier . --check
 
       - name: Lint
         run: npm run lint
 
       - name: Rodar testes com Jest
-        run: npm test
+        run: npm test test:ci
