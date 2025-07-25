@@ -1,0 +1,9 @@
+@types
+out
+node_modules
+.next
+public
+coverage
+dist
+build
+.idea
