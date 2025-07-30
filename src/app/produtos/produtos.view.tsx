@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Card } from "@/components/card/Card";
-import { useProdutosModel } from "./produtos.model";
-import { CardItem } from "@/components/card-item/CardItem";
+import { Card } from '~/components/card/Card';
+import { useProdutosModel } from './produtos.model';
+import { CardItem } from '~/components/card-item/CardItem';
 
 type ProdutosViewProps = ReturnType<typeof useProdutosModel>;
 
@@ -17,7 +17,7 @@ export const ProdutosView = (props: ProdutosViewProps) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-6 justify-center">
         {props?.listaProdutos?.map((resp, key) => {
           return (
-            <Card key={key + "-" + resp}>
+            <Card key={key + '-' + resp}>
               <CardItem
                 title={resp.title}
                 imageSrc={resp.imageSrc[0]}

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import { PropsWithChildren } from 'react';
-import { ThemeWrapper } from '@/components/theme-wrapper/ThemeWrapper';
+import { ThemeWrapper } from '~/components/theme-wrapper/ThemeWrapper';
 
 export const metadata: Metadata = {
   title: 'Catálogo',

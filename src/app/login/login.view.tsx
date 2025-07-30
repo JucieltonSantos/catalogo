@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { Card } from "@/components/card/Card";
-import { LoginFormComponent } from "./components/login-form/LoginForm";
-import { useLoginModel } from "./login.model";
-import { CardContent } from "@/components/card-content/CardContent";
+import { Card } from '~/components/card/Card';
+import { LoginFormComponent } from './components/login-form/LoginForm';
+import { useLoginModel } from './login.model';
+import { CardContent } from '~/components/card-content/CardContent';
 
 type LoginViewProps = ReturnType<typeof useLoginModel>;
 
 export const LoginView = (props: LoginViewProps) => {
   const { errors, isValid, loading, onSubmit, register } = props;
-  
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
       <Card className="w-full max-w-sm">

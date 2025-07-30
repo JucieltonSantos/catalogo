@@ -1,9 +1,9 @@
-import { useRouter } from "next/navigation";
-import { useAuth } from "@/hooks/use-auth";
-import { LogOut, Menu, Moon, Sun, X } from "lucide-react";
-import { useState } from "react";
-import { Button } from "../button/button";
-import { useTheme } from "@/context/ThemeContext";
+import { useRouter } from 'next/navigation';
+import { useAuth } from '~/hooks/use-auth';
+import { LogOut, Menu, Moon, Sun, X } from 'lucide-react';
+import { useState } from 'react';
+import { Button } from '../button/button';
+import { useTheme } from '~/context/ThemeContext';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -13,7 +13,7 @@ export function Header() {
 
   const handleLogout = () => {
     removeToken();
-    router.push("/login");
+    router.push('/login');
   };
 
   return (
@@ -21,9 +21,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-              AutoPeças
-            </h1>
+            <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400">AutoPeças</h1>
           </div>
 
           <div className="hidden md:flex items-center space-x-4">
@@ -75,7 +73,7 @@ export function Header() {
                   <Moon className="h-5 w-5 text-gray-700 dark:text-gray-300" />
                 )}
                 <span className="text-gray-700 dark:text-gray-300">
-                  {isDarkMode ? "Modo Claro" : "Modo Escuro"}
+                  {isDarkMode ? 'Modo Claro' : 'Modo Escuro'}
                 </span>
               </button>
 

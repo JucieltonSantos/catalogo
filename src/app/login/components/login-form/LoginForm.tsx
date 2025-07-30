@@ -1,6 +1,6 @@
-import { LoginFormComponentProps } from '@/domain/types/login';
+import { LoginFormComponentProps } from '~/domain/types/login';
 import { LoginField } from '../login-field/LoginField';
-import { Button } from '@/components/button/button';
+import { Button } from '~/components/button/button';
 
 export function LoginFormComponent({
   onSubmit,

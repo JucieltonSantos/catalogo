@@ -1,12 +1,7 @@
-import { Input } from "@/components/input/Input";
-import { LoginFieldProps } from "@/domain/entities/login";
+import { Input } from '~/components/input/Input';
+import { LoginFieldProps } from '~/domain/entities/login';
 
-export function LoginField({
-  type,
-  placeholder,
-  error,
-  registerProps,
-}: LoginFieldProps) {
+export function LoginField({ type, placeholder, error, registerProps }: LoginFieldProps) {
   return (
     <div>
       <Input type={type} placeholder={placeholder} {...registerProps} />

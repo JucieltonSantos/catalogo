@@ -1,28 +1,26 @@
-"use client";
+'use client';
 
-import { Button } from "@/components/button/button";
-import Image from "next/image";
-import { useParams } from "next/navigation";
-import { useProdutosModel } from "../produtos.model";
-import { Header } from "@/components/header/header";
-import { toast, ToastContainer } from "react-toastify";
-import { useState } from "react";
+import { Button } from '~/components/button/button';
+import Image from 'next/image';
+import { useParams } from 'next/navigation';
+import { useProdutosModel } from '../produtos.model';
+import { Header } from '~/components/header/header';
+import { toast, ToastContainer } from 'react-toastify';
+import { useState } from 'react';
 
 function ProdutoDetalhe() {
   const products = useProdutosModel();
   const { id } = useParams();
-  const [selectImage, setSelectImage] = useState<string>("");
+  const [selectImage, setSelectImage] = useState<string>('');
 
-  const getProductId = products.listaProdutos.find(
-    (produto) => produto.id === id
-  );
+  const getProductId = products.listaProdutos.find((produto) => produto.id === id);
 
   if (!getProductId) {
     return <div>Produto não encontrado.</div>;
   }
 
   const handleBuy = () => {
-    toast.success("Produto adicionado ao carrinho!");
+    toast.success('Produto adicionado ao carrinho!');
   };
 
   return (
@@ -38,7 +36,7 @@ function ProdutoDetalhe() {
                   <div
                     key={idx}
                     className={`cursor-pointer border-1 rounded hover:scale-105 transition hover:border-blue-950 ${
-                      isSelectImage ? "border-blue-800" : "border-gray-500"
+                      isSelectImage ? 'border-blue-800' : 'border-gray-500'
                     } min-h-14 flex items-center justify-center`}
                     onClick={() => setSelectImage(img)}
                   >
@@ -68,12 +66,8 @@ function ProdutoDetalhe() {
           <div className="space-y-4">
             <h1 className="text-3xl font-bold">{getProductId.title}</h1>
 
-            <div className="text-gray-500 line-through">
-              R$ {getProductId.priceDescount}
-            </div>
-            <div className="text-2xl text-green-600 font-semibold">
-              R$ {getProductId.price}
-            </div>
+            <div className="text-gray-500 line-through">R$ {getProductId.priceDescount}</div>
+            <div className="text-2xl text-green-600 font-semibold">R$ {getProductId.price}</div>
 
             <p className="text-gray-700">{getProductId.title}</p>
 

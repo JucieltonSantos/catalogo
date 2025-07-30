@@ -1,10 +1,10 @@
-import { loginSchema } from "@/app/login/login.schema";
-import { FieldErrors, UseFormRegister } from "react-hook-form";
-import z from "zod";
+import { loginSchema } from '~/app/login/login.schema';
+import { FieldErrors, UseFormRegister } from 'react-hook-form';
+import z from 'zod';
 
 export type LoginForm = z.infer<typeof loginSchema>;
 
-export type Status = "success";
+export type Status = 'success';
 
 export type LoginFormFields = {
   user: string;
