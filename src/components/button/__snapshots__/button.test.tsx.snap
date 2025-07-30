@@ -5,7 +5,7 @@ exports[`Button snapshot Verifica o snapshot 1`] = `
   <button
     class="cursor-pointer bg-blue-600 text-white font-semibold py-2 px-4 rounded disabled:opacity-50 buttonTeste"
   >
-    Clique
+    Clique button
   </button>
 </div>
 `;
